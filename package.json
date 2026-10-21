@@ -1,0 +1,27 @@
+{
+  "name": "saucedemo-qa-automation",
+  "version": "1.0.0",
+  "private": true,
+  "description": "BDD UI automation framework using Cucumber, Playwright, TypeScript, POM and an optional DB validation utility.",
+  "scripts": {
+    "test": "cucumber-js",
+    "test:happy": "cucumber-js features/purchase.feature",
+    "test:negative": "cucumber-js features/invalid-login.feature",
+    "typecheck": "tsc --noEmit",
+    "test:headed": "cross-env HEADLESS=false cucumber-js",
+    "report": "node scripts/pretty-report.js"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.3.0",
+    "@types/node": "^22.13.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.7",
+    "multiple-cucumber-html-reporter": "^3.9.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "mysql2": "^3.12.0",
+    "playwright": "^1.51.0"
+  }
+}
