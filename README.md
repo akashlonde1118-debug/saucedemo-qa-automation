@@ -146,3 +146,54 @@ SauceDemo's standard sample account:
 - Password: `secret_sauce`
 
 Use only on the public demo site, not for real accounts.
+
+## Database Integration Design
+
+The framework includes a database connection utility to demonstrate separation of database configuration, query execution, and validation logic.
+
+Planned validation approach:
+- Establish a database connection using environment-based configuration.
+- Execute parameterized SQL queries.
+- Validate expected database records and values.
+- Handle database errors and close connections appropriately.
+- Use isolated test data and cleanup where applicable.
+
+**Limitation:** SauceDemo does not provide direct database access for this assignment. Therefore, live database validation against SauceDemo has not been performed. The database validation approach is documented as a design demonstration.
+
+## AI / Copilot Usage Disclosure
+
+AI-assisted tools were used to support parts of the automation development and troubleshooting process. The generated suggestions were reviewed and adapted to the project requirements.
+
+The final implementation and design decisions are the responsibility of the author.
+
+## Test Execution
+
+Install dependencies:
+
+npm install
+npx playwright install chromium
+
+Run TypeScript validation:
+
+npm run typecheck
+
+Run all BDD scenarios:
+
+npm test
+
+Run the negative login scenario:
+
+
+npm run test:negative
+
+
+Run the successful purchase scenario:
+
+npm run test:happy
+
+
+## Walkthrough Video
+
+Video: https://drive.google.com/file/d/1Xo-D9q9RJk-B5jf-FQa0O6zGDbZ2z9kM/view?usp=sharing
+
+The walkthrough covers project structure, BDD scenarios, Page Object Model, locator strategy, hooks, database integration design, and test execution.
